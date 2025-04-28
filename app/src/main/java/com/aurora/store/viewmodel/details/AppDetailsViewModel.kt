@@ -10,8 +10,6 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.paging.PagingData
-import androidx.paging.cachedIn
 import com.aurora.Constants
 import com.aurora.gplayapi.data.models.App
 import com.aurora.gplayapi.data.models.Review
@@ -24,11 +22,9 @@ import com.aurora.gplayapi.network.IHttpClient
 import com.aurora.store.BuildConfig
 import com.aurora.store.data.helper.DownloadHelper
 import com.aurora.store.data.model.ExodusReport
-import com.aurora.store.data.model.ExodusTracker
 import com.aurora.store.data.model.PlexusReport
 import com.aurora.store.data.model.Report
 import com.aurora.store.data.model.Scores
-import com.aurora.store.data.paging.GenericPagingSource.Companion.createPager
 import com.aurora.store.data.providers.AuthProvider
 import com.aurora.store.data.room.favourite.Favourite
 import com.aurora.store.data.room.favourite.FavouriteDao
@@ -36,7 +32,6 @@ import com.aurora.store.util.CertUtil
 import com.aurora.store.util.PackageUtil
 import com.aurora.store.util.PackageUtil.PACKAGE_NAME_GMS
 import com.aurora.store.util.Preferences
-import com.aurora.store.util.Preferences.PREFERENCE_SIMILAR
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_EXTENDED
 import com.google.gson.Gson
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -48,9 +43,6 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import org.json.JSONObject
@@ -68,8 +60,7 @@ class AppDetailsViewModel @Inject constructor(
     private val downloadHelper: DownloadHelper,
     private val favouriteDao: FavouriteDao,
     private val httpClient: IHttpClient,
-    private val gson: Gson,
-    private val exodusTrackers: JSONObject
+    private val gson: Gson
 ) : ViewModel() {
 
     private val TAG = AppDetailsViewModel::class.java.simpleName
@@ -77,9 +68,8 @@ class AppDetailsViewModel @Inject constructor(
     private val _app = MutableStateFlow<App?>(App(""))
     val app = _app.asStateFlow()
 
-    private var reviewsNextPageUrl: String? = null
-    private val _reviews = MutableStateFlow<PagingData<Review>>(PagingData.empty())
-    val reviews = _reviews.asStateFlow()
+    private val _suggestions = MutableStateFlow<List<App>>(emptyList())
+    val suggestions = _suggestions.asStateFlow()
 
     private val _userReview = MutableStateFlow<Review?>(null)
     val userReview = _userReview.asStateFlow()
@@ -128,9 +118,6 @@ class AppDetailsViewModel @Inject constructor(
     val hasValidUpdate: Boolean
         get() = (isUpdatable && hasValidCerts) || (isUpdatable && isExtendedUpdateEnabled)
 
-    val showSimilarApps: Boolean
-        get() = Preferences.getBoolean(context, PREFERENCE_SIMILAR)
-
     fun fetchAppDetails(packageName: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
@@ -148,7 +135,7 @@ class AppDetailsViewModel @Inject constructor(
             // Only proceed if there was no error while fetching the app details
             if (throwable != null) return@invokeOnCompletion
 
-            fetchReviews()
+            fetchSuggestions()
             fetchExodusPrivacyReport(packageName)
             if (app.value!!.dependencies.dependentPackages.contains(PACKAGE_NAME_GMS)) {
                 fetchPlexusReport(packageName)
@@ -156,20 +143,16 @@ class AppDetailsViewModel @Inject constructor(
         }
     }
 
-    fun fetchReviews(filter: Review.Filter = Review.Filter.ALL) {
-        reviewsNextPageUrl = null
+    private fun fetchSuggestions() {
+        // Bail out if we go no suggestions to offer
+        if (app.value!!.detailsStreamUrl.isNullOrBlank()) return
 
-        createPager {
-            val reviewsCluster = reviewsNextPageUrl?.let { nextPageUrl ->
-                reviewsHelper.next(nextPageUrl)
-            } ?: reviewsHelper.getReviews(app.value!!.packageName, filter)
-
-            reviewsNextPageUrl = reviewsCluster.nextPageUrl
-            reviewsCluster.reviewList
-        }.flow.distinctUntilChanged()
-            .cachedIn(viewModelScope)
-            .onEach { _reviews.value = it }
-            .launchIn(viewModelScope)
+        viewModelScope.launch(Dispatchers.IO) {
+            val streamBundle = appDetailsHelper.getDetailsStream(app.value!!.detailsStreamUrl!!)
+            _suggestions.value = streamBundle.streamClusters.values
+                .flatMap { it.clusterAppList }
+                .distinctBy { it.packageName }
+        }
     }
 
     private fun fetchExodusPrivacyReport(packageName: String) {
@@ -197,7 +180,8 @@ class AppDetailsViewModel @Inject constructor(
     fun fetchTestingProgramStatus(packageName: String, subscribe: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                _testingProgramStatus.value = appDetailsHelper.testingProgram(packageName, subscribe)
+                _testingProgramStatus.value =
+                    appDetailsHelper.testingProgram(packageName, subscribe)
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to fetch testing program status", exception)
             }
@@ -272,26 +256,6 @@ class AppDetailsViewModel @Inject constructor(
         }
     }
 
-    fun getExodusTrackersFromReport(): List<ExodusTracker> {
-        val trackerObjects = exodusReport.value!!.trackers.map {
-            exodusTrackers.getJSONObject(it.toString())
-        }.toList()
-
-        return trackerObjects.map {
-            ExodusTracker(
-                id = it.getInt("id"),
-                name = it.getString("name"),
-                url = it.getString("website"),
-                signature = it.getString("code_signature"),
-                date = it.getString("creation_date"),
-                description = it.getString("description"),
-                networkSignature = it.getString("network_signature"),
-                documentation = listOf(it.getString("documentation")),
-                categories = listOf(it.getString("categories"))
-            )
-        }.toList()
-    }
-
     private fun getLatestExodusReport(packageName: String): Report? {
         val url = "${Constants.EXODUS_SEARCH_URL}$packageName"
         val headers = mutableMapOf(
@@ -303,12 +267,6 @@ class AppDetailsViewModel @Inject constructor(
         val playResponse = httpClient.get(url, headers)
         return parseExodusResponse(String(playResponse.responseBytes), packageName)
             .firstOrNull()
-    }
-
-    private fun getPlexusReport(packageName: String): PlexusReport? {
-        val url = "${Constants.PLEXUS_API_URL}/${packageName}/?scores=true"
-        val playResponse = httpClient.get(url, emptyMap())
-        return gson.fromJson(String(playResponse.responseBytes), PlexusReport::class.java)
     }
 
     private fun parseExodusResponse(response: String, packageName: String): List<Report> {
@@ -323,5 +281,11 @@ class AppDetailsViewModel @Inject constructor(
         } catch (e: Exception) {
             return emptyList()
         }
+    }
+
+    private fun getPlexusReport(packageName: String): PlexusReport? {
+        val url = "${Constants.PLEXUS_API_URL}/${packageName}/?scores=true"
+        val playResponse = httpClient.get(url, emptyMap())
+        return gson.fromJson(String(playResponse.responseBytes), PlexusReport::class.java)
     }
 }

@@ -1,6 +1,7 @@
 [versions]
 activityCompose = "1.10.1"
 androidGradlePlugin = "8.9.2"
+adaptive = "1.1.0"
 androidx-hilt = "1.2.0"
 browserVersion = "1.8.0"
 coilVersion = "3.1.0"
@@ -43,6 +44,9 @@ workVersion = "2.10.1"
 airbnb-epoxy-android = { module = "com.airbnb.android:epoxy", version.ref = "epoxyVersion" }
 airbnb-epoxy-processor = { module = "com.airbnb.android:epoxy-processor", version.ref = "epoxyVersion" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-adaptive-core = { module = "androidx.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
+androidx-adaptive-layout = { module = "androidx.compose.material3.adaptive:adaptive-layout", version.ref = "adaptive" }
+androidx-adaptive-navigation = { module = "androidx.compose.material3.adaptive:adaptive-navigation", version.ref = "adaptive" }
 androidx-browser = { module = "androidx.browser:browser", version.ref = "browserVersion" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreVersion" }

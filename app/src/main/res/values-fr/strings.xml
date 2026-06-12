@@ -525,7 +525,7 @@
     <string name="installed_updated_at">Mises à jour de <xliff:g id="when">%1$s</xliff:g></string>
     <string name="action_check">Vérifier</string>
     <string name="pref_theme_style_system">Thème du système</string>
-    <string name="download_failed_storage">Espace de stockage insuffisant pour télécharger cette appli</string>
+    <string name="download_failed_storage">L’espace de stockage est insuffisant pour télécharger cette appli</string>
     <string name="installer_fallback_session">Le programme d’installation choisi est inaccessible. Le programme d’installation par défaut sera utilisé à la place.</string>
     <string name="title_security">Sécurité</string>
     <string name="app_lock_title">Verrouillage d\'appli</string>

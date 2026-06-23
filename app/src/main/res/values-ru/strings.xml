@@ -325,7 +325,7 @@
     <string name="source_code_subtitle">Узнайте, что внутри</string>
     <string name="privacy_policy_subtitle">Узнайте, как Aurora Store использует ваши данные</string>
     <string name="native_installer_subtitle">Классический установщик, доступный на всех устройствах</string>
-    <string name="am_installer_desc">Требуется менеджер приложений, необходим adb/root режим, чтобы произвести установку при включенной MIUI оптимизации</string>
+    <string name="am_installer_desc">Требуется диспетчер приложений, необходим режим adb/root, чтобы произвести установку при включенной оптимизации MIUI</string>
     <string name="shizuku_installer_subtitle">Использует API системы напрямую с adb/root привилегиями</string>
     <string name="title_more">Еще</string>
     <string name="manage_account">Управление профилем</string>
@@ -590,5 +590,37 @@
         <item quantity="few">%1$d избранных</item>
         <item quantity="many">%1$d избранных</item>
         <item quantity="other">%1$d избранных</item>
+    </plurals>
+    <string name="account_set_default">Установить по умолчанию</string>
+    <string name="account_default">По умолчанию</string>
+    <string name="account_remove">Удалить</string>
+    <string name="account_remove_title">Удалить аккаунт?</string>
+    <string name="account_remove_message">Удалить %1$s из Aurora Store?</string>
+    <string name="account_remove_last_message">Это ваш единственный аккаунт. Если вы его удалите, то будет осуществлен выход и вы не сможете использовать Aurora Store, пока не авторизуетесь снова.</string>
+    <string name="account_add">Добавить аккаунт</string>
+    <string name="account_add_device">Аккаунты устройств</string>
+    <string name="account_add_google">Войти через Google</string>
+    <string name="account_add_anonymous">Добавить анонимный аккаунт</string>
+    <string name="account_set_default_title">Сменить аккаунт по умолчанию?</string>
+    <string name="account_set_default_message">Aurora Store перезапустится, чтобы использовать новый аккаунт по умолчанию.</string>
+    <string name="account_switching">Переключение аккаунта…</string>
+    <string name="account_adding">Добавление аккаунта…</string>
+    <string name="account_refresh_all">Обновить все аккаунты</string>
+    <string name="account_refreshing">Обновление аккаунтов…</string>
+    <string name="account_refresh_done">Все аккаунты обновлены</string>
+    <string name="account_switch_failed">Не удалось обновить этот аккаунт, поэтому значение по умолчанию не изменилось.</string>
+    <string name="account_add_failed">Не удалось добавить этот аккаунт. Пожалуйста, попробуйте еще раз.</string>
+    <string name="action_switch_account">Сменить аккаунт</string>
+    <plurals name="account_count">
+        <item quantity="one">Всего %1$d аккаунт</item>
+        <item quantity="few">Всего %1$d аккаунта</item>
+        <item quantity="many">Всего %1$d аккаунтов</item>
+        <item quantity="other">Всего %1$d аккаунтов</item>
+    </plurals>
+    <plurals name="account_refresh_failed">
+        <item quantity="one">Не удалось обновить %1$d аккаунт</item>
+        <item quantity="few">Не удалось обновить %1$d аккаунта</item>
+        <item quantity="many">Не удалось обновить %1$d аккаунтов</item>
+        <item quantity="other">Не удалось обновить %1$d аккаунтов</item>
     </plurals>
 </resources>

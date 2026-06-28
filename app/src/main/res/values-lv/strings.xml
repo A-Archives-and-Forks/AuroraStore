@@ -557,4 +557,5 @@
     <string name="pref_ui_dynamic_color">Pielāgojošas krāsas</string>
     <string name="pref_ui_dynamic_color_desc">Izmantot krāsas no ekrāntapetes. Izslēgt, lai izmantotu Aurora zīmola paleti.</string>
     <string name="source_filters_installers_empty">Vēl nav pievienots neviens uzstādītājs</string>
+    <string name="account_switching">Maina kontu…</string>
 </resources>

@@ -26,7 +26,7 @@
     <string name="action_filter_apps_with_ads">Lietotnes ar reklāmām</string>
     <string name="action_filter_apply">Lietot</string>
     <string name="action_filter_all">Visi</string>
-    <string name="action_filter">Filtri</string>
+    <string name="action_filter">Atsijātāji</string>
     <string name="action_export">Izgūt</string>
     <string name="action_disable">Atspējot</string>
     <string name="action_copy_link">Ievietot saiti starpliktuvē</string>
@@ -97,7 +97,7 @@
     <string name="installer_status_failure">Uzstādīšana neizdevās</string>
     <string name="installer_status_failure_blocked">Uzstādīšana tika aizturēta</string>
     <string name="installer_status_failure_session">Nevarēja uzsākt sesiju</string>
-    <string name="installer_status_failure_conflict">Pastāv pretrunīga lietotne</string>
+    <string name="installer_status_failure_conflict">Pastāv pretrunīga pakotne</string>
     <string name="installer_status_failure_incompatible">Nesaderīga lietotne</string>
     <string name="installer_status_failure_invalid">Nederīgs vai bojāts APK</string>
     <string name="installer_status_failure_storage">Nepietiek atmiņas</string>
@@ -285,7 +285,7 @@
     <string name="android_market_desc">Android Market bija tiešsaistes veikals, kas piedāvāja lietotnes, kas ir paredzētas Android ierīcēm, tas pārstāja darboties 2017. gadā.</string>
     <string name="details_ratings_title_hint">Apskata nosaukums</string>
     <string name="pref_network_proxy_url">Starpniekservera URL</string>
-    <string name="pref_updates_check_frequency_desc">Cik bieži Aurorai veikt lietotņu atjauninājumu pārbaudi.</string>
+    <string name="pref_updates_check_frequency_desc">Cik bieži Aurora pārbauda lietotņu atjauninājumus.</string>
     <string name="pref_aurora_only">Atsijāt lietotnes no citiem avotiem.</string>
     <string name="toast_proxy_invalid">Nederīgs starpniekservera URL, pārbaudiet URL struktūras formātu!</string>
     <string name="pref_aurora_only_desc">Nepārbaudīt atjauninājumus lietotnēm, kuras ir uzstādītas no avotiem ārpus Aurora Store</string>
@@ -452,7 +452,7 @@
     <string name="no_description">Nav pieejams apraksts</string>
     <string name="details_more_info">Vairāk informācijas</string>
     <string name="details_more_target_api">Mērķi</string>
-    <string name="details_more_package_name">Lietotnes unikālais nosaukums</string>
+    <string name="details_more_package_name">Pakotnes nosaukums</string>
     <string name="details_more_content_rating">Satura novērtējums</string>
     <string name="select_app_for_details">Jāatlasa lietotne, lai iegūtu vairāk informācijas</string>
     <string name="action_filter_no_ads">Nav reklāmu</string>
@@ -515,7 +515,7 @@
     <string name="account_add_anonymous">Pievienot anonīmu kontu</string>
     <string name="account_set_default_title">Pārslēgt noklusējuma kontu?</string>
     <string name="action_switch_account">Pārslēgt kontu</string>
-    <string name="pref_ui_theme">Motīvs</string>
+    <string name="pref_ui_theme">Izskats</string>
     <string name="pref_theme_style_light">Gaišs</string>
     <string name="pref_theme_style_dark">Tumšs</string>
     <string name="installed_sort_name">Nosaukuma</string>
@@ -525,15 +525,15 @@
     <string name="verifying_downloads">Pārbauda lejupielādes</string>
     <string name="status_installing">Uzstāda</string>
     <string name="title_notifications">Paziņojumi</string>
-    <string name="installed_sort_filter">Kārtot un atlasīt</string>
+    <string name="installed_sort_filter">Kārtot un atsijāt</string>
     <string name="installed_sort_by">Kārtot pēc</string>
     <string name="installed_sort_date_installed">Uzstādīšanas datuma</string>
     <string name="installed_sort_date_updated">Atjaunināšanas datuma</string>
-    <string name="installed_sort_package_name">Lietotnes unikālā nosaukuma</string>
+    <string name="installed_sort_package_name">Pakotnes nosaukuma</string>
     <string name="installed_sort_ascending">Augošā secībā</string>
     <string name="installed_sort_descending">Dilstošā secībā</string>
-    <string name="installed_filter">Atlasīt</string>
-    <string name="installed_filter_user_apps">Lietotāju lietotnes</string>
+    <string name="installed_filter">Atsijāt</string>
+    <string name="installed_filter_user_apps">Lietotāja lietotnes</string>
     <string name="installed_filter_system_apps">Sistēmas lietotnes</string>
     <string name="installed_filter_installer">Uzstādīta no</string>
     <string name="installed_filter_all">Visas</string>
@@ -543,8 +543,8 @@
     <string name="source_filters_remove">Noņemt uzstādītāju</string>
     <string name="updates_incompatible_header">Nesaderīgi atjauninājumi</string>
     <string name="pref_theme_style_system">Izmantot sistēmas</string>
-    <string name="source_filters_add_dialog_hint">Norādiet lietotnes unikālo nosaukumu</string>
-    <string name="source_filters_installers_header">Konkrētus uzstādītājus</string>
+    <string name="source_filters_add_dialog_hint">Ievadīt pakotnes nosaukumu</string>
+    <string name="source_filters_installers_header">Noteikti uzstādītāji</string>
     <string name="account_adding">Pievieno kontu…</string>
     <string name="account_refreshing">Atsvaidzina kontus…</string>
     <string name="pref_updates_check_frequency_3h">Ik pēc 3 stundām</string>
@@ -554,5 +554,7 @@
     <string name="pref_updates_check_frequency_7d">Ik pēc 7 dienām</string>
     <string name="pref_updates_check_frequency_15d">Ik pēc 15 dienām</string>
     <string name="pref_updates_check_frequency_24h">Ik pēc 24 stundām</string>
-    <string name="pref_ui_dynamic_color">Dinamiskas krāsas</string>
+    <string name="pref_ui_dynamic_color">Pielāgojošas krāsas</string>
+    <string name="pref_ui_dynamic_color_desc">Izmantot krāsas no ekrāntapetes. Izslēgt, lai izmantotu Aurora zīmola paleti.</string>
+    <string name="source_filters_installers_empty">Vēl nav pievienots neviens uzstādītājs</string>
 </resources>

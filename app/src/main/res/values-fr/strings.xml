@@ -308,7 +308,7 @@
     <string name="pref_updates_incompatible">Afficher les mises à jour susceptibles d’échouer</string>
     <string name="pref_updates_incompatible_desc">Afficher les mises à jour pour les applis incompatibles ou désactivées dont l’installation peut échouer.</string>
     <string name="action_home_screen">Ajouter à l’écran d’accueil</string>
-    <string name="faqs_subtitle">Vous avez des questions ? Découvrez les réponses</string>
+    <string name="faqs_subtitle">Des questions ? Trouvez les réponses</string>
     <string name="source_code_title">Code source</string>
     <string name="privacy_policy_subtitle">Découvrez comment Aurora Store utilise vos données</string>
     <string name="manual_download_hint">Saisissez le code de la version que vous voulez télécharger</string>

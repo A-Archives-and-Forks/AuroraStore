@@ -43,7 +43,7 @@
     <string name="about_bitcoin_bch">Bitcoin Сash</string>
     <string name="about_telegram">Telegram</string>
     <string name="action_blacklist_add">Добавить в черный список</string>
-    <string name="action_blacklist">Чёрный список</string>
+    <string name="action_blacklist">Черный список</string>
     <string name="action_back">Назад</string>
     <string name="account_logout">Выйти из Aurora</string>
     <string name="account_login_using">Войти с помощью</string>
@@ -242,7 +242,7 @@
     <string name="download_eta_min">Осталось %1$d мин %2$d сек</string>
     <string name="download_eta_sec">Осталось %1$d сек</string>
     <string name="onboarding_permission_notifications">Уведомления</string>
-    <string name="session_good">Всё хорошо.</string>
+    <string name="session_good">Все хорошо.</string>
     <string name="session_init">Подготовка…</string>
     <string name="session_login_failed_google">Не удалось войти через Google</string>
     <string name="title_advanced">Дополнительно</string>
@@ -496,10 +496,10 @@
     <string name="pref_self_update_desc">Предлагать новые сборки Aurora Store во вкладке \"Обновления\".</string>
     <string name="pref_source_filters_title">Фильтровать приложения из других источников</string>
     <string name="pref_source_filters_desc_all">Пропустить все приложения, не установленные из Aurora Store</string>
-    <string name="pref_source_filters_desc_none">Ни один установщик не исключён</string>
+    <string name="pref_source_filters_desc_none">Ни один установщик не исключен</string>
     <string name="pref_source_filters_desc_count">%1$d установщик(а) исключены</string>
     <string name="source_filters_all">Фильтровать все прочие установщики</string>
-    <string name="source_filters_installers_header">Определённые установщики</string>
+    <string name="source_filters_installers_header">Определенные установщики</string>
     <string name="source_filters_installers_empty">Ни один установщик пока не добавлен</string>
     <string name="source_filters_add">Добавить установщик</string>
     <string name="source_filters_add_dialog_hint">Введите имя пакета</string>

@@ -125,8 +125,8 @@
     <string name="installer_service_available">Aurora 서비스는 사용 가능하고 설치할 준비가 되었습니다.</string>
     <string name="installer_status_user_action">사용자의 승인 대기 중</string>
     <string name="menu_disclaimer">면책 조항</string>
-    <string name="installer_service_misconfigured">먼저 Aurora service를 설정하고 모든 권한을 부여하세요.</string>
-    <string name="installer_service_unavailable">1.0.9 이상의 Aurora services 설치하거나, 설치 프로그램을 변경하세요.</string>
+    <string name="installer_service_misconfigured">먼저 Aurora 서비스를 설정하고 모든 권한을 부여하세요.</string>
+    <string name="installer_service_unavailable">1.0.9 이상의 Aurora 서비스를 설치하거나, 설치 프로그램을 변경하세요.</string>
     <string name="onboarding_permission_esa_desc">대형 앱 및 게임용 APK 확장 파일(OBB)을 저장합니다.</string>
     <string name="download_paused">일시 중지됨 • <xliff:g id="completed_downloads">%1$d</xliff:g> / <xliff:g id="all_downloads">%2$d</xliff:g></string>
     <string name="download_progress">다운로드 중 • <xliff:g id="completed_downloads">%1$d</xliff:g> / <xliff:g id="all_downloads">%2$d</xliff:g> • <xliff:g id="speed">%3$s</xliff:g></string>
@@ -158,7 +158,7 @@
     <string name="installer_status_failure">설치 실패</string>
     <string name="installer_status_failure_storage">저장 공간이 충분하지 않음</string>
     <string name="installer_status_failure_incompatible">호환 불가 앱</string>
-    <string name="installer_status_success">성공적으로 설치됨</string>
+    <string name="installer_status_success">설치 성공</string>
     <string name="installer_status_failure_invalid">유효하지 않거나 손상된 APK</string>
     <string name="menu_terms">이용 약관</string>
     <string name="action_import">불러오기</string>
@@ -175,7 +175,7 @@
     <string name="pref_install_mode_shizuku">Shizuku 설치기</string>
     <string name="pref_install_mode_native">기본 설치 프로그램(소멸됨)</string>
     <string name="pref_install_mode_root">루트 설치기</string>
-    <string name="pref_install_mode_services">오로라 서비스 (지원 중단)</string>
+    <string name="pref_install_mode_services">Aurora 서비스 (지원 중단)</string>
     <string name="pref_install_mode_session">세션 설치기</string>
     <string name="pref_install_mode_title">설치 방식</string>
     <string name="pref_vending_version_title">Google Play 버전</string>
@@ -188,7 +188,7 @@
     <string name="title_about">소개</string>
     <string name="pref_ui_no_for_you_desc">홈 화면에 페이지 표시</string>
     <string name="pref_updates_incompatible">실패 예상 업데이트 보기</string>
-    <string name="pref_aurora_only">다른 경로로 설치된 앱 제외</string>
+    <string name="pref_aurora_only">다른 출처의 앱 제외</string>
     <string name="purchase_unsupported">앱 지원되지 않음</string>
     <string name="purchase_not_found">앱을 찾을 수 없음</string>
     <string name="purchase_no_file">파일을 얻을 수 없음</string>
@@ -197,7 +197,7 @@
     <string name="title_apps_games">내 앱 &amp; 게임</string>
     <string name="title_apps_library">라이브러리의 앱</string>
     <string name="title_device">기기</string>
-    <string name="session_good">와우! 모두 좋습니다.</string>
+    <string name="session_good">좋습니다.</string>
     <string name="title_blacklist_manager">블랙리스트 관리자</string>
     <string name="pref_install_mode_summary">APK 설치 모드 선택</string>
     <string name="title_download_manager">다운로드</string>
@@ -235,7 +235,7 @@
     <string name="updates_available">업데이트 사용 가능</string>
     <string name="error">오류가 발생했습니다!</string>
     <string name="pref_updates_auto_off">앱을 자동-업데이트 안함</string>
-    <string name="pref_updates_check_frequency_desc">자동 업데이트를 진행할 시간 간격을 설정하세요.</string>
+    <string name="pref_updates_check_frequency_desc">Aurora가 앱 업데이트를 얼마나 자주 확인할지 설정합니다.</string>
     <string name="search_hint">앱 &amp; 게임을 검색</string>
     <string name="permissions_denied">필수 권한이 거부되었습니다. 행동을 계속하기 위해 권한을 부여하십시오</string>
     <string name="app_links_desc">오로라 스토어에서 지원되는 링크 열기</string>
@@ -293,7 +293,7 @@
     <string name="toast_export_failed">장치 구성을 내보낼 수 없습니다</string>
     <string name="pref_updates_auto_install">사용 가능한 업데이트 자동 확인 &amp; 설치</string>
     <string name="failed_generating_session">세션을 생성하지 못했습니다. 오류 코드: &lt;xliff:gid=\"status_code\"&gt;%1$d&lt;/xliff:g&gt;</string>
-    <string name="pref_updates_incompatible_desc">설치 실패 가능성이 있는 호환되지 않거나 사용 중지된 앱의 업데이트 표시</string>
+    <string name="pref_updates_incompatible_desc">설치에 실패할 수 있는 미호환 앱이나 사용 중지된 앱의 업데이트를 표시합니다.</string>
     <string name="toast_developer_setting_failed">장치 설정에서 개발자 옵션을 활성화하여 엽니다.</string>
     <string name="toast_spoof_applied">디바이스 스푸프가 적용되었습니다.</string>
     <string name="toast_permission_granted">권한 부여</string>
@@ -318,7 +318,7 @@
     <string name="root_installer_desc">루트/슈퍼유저 권한이 필요하며 모든 안드로이드 버전을 지원합니다.</string>
     <string name="native_installer_subtitle">의도 기반 설치 프로그램, 모든 장치에서 사용 가능</string>
     <string name="services_installer_subtitle">백그라운드 설치용 설치 관리자</string>
-    <string name="services_installer_desc">Aurora Services를 권한 있는 시스템 앱으로 설치해야 함</string>
+    <string name="services_installer_desc">Aurora 서비스를 시스템 권한 앱으로 설치해야 함</string>
     <string name="am_installer_subtitle">완전한 기능을 갖춘 오픈 소스 패키지 관리자</string>
     <string name="am_installer_desc">App Manager가 필요하며 miui 최적화가 켜져 있을 때 설치하려면 adb/root 모드가 필요합니다</string>
     <string name="shizuku_installer_subtitle">adb/root 권한으로 시스템 API 직접 사용</string>
@@ -395,7 +395,7 @@
     <string name="add_dispenser_summary">토큰 분배자를 Aurora Store에 추가하십시오. Token dispensers는 익명으로 로그인하는 Aurora Store에 계정 자격 증명을 제공합니다.</string>
     <string name="export_app_summary">잠시만요, 파일을 내보내세요</string>
     <string name="action_unarchive">언아카이브</string>
-    <string name="about_aurora_store_summary">Aurora Store를 사용하면 구글 플레이 스토어(Google Play Store)의 앱을 공식적으로 검색하고 다운로드할 수 있습니다. 앱 상세 설명, 스크린샷, 업데이트 정보, 다른 사용자들의 리뷰 등을 확인할 수 있으며, 구글 플레이로부터 기기에 직접 APK 파일을 다운로드할 수 있습니다. Aurora Store를 사용하려면 구글 플레이 계정이 필요하며, 앱을 처음 실행하고 설정할 때 해당 계정으로 로그인해야 합니다.\n\n일반적인 앱 스토어와 달리, Aurora Store는 어떠한 앱도 직접 소유하거나 라이선스를 보유하거나 배포하지 않습니다. Aurora Store에 표시되는 모든 앱, 설명, 스크린샷 및 기타 콘텐츠는 구글 플레이에서 직접 액세스하여 다운로드하거나 표시하는 것입니다. Aurora Store는 일종의 \'문\'이나 \'브라우저\'와 같은 역할을 하며, 사용자가 자신의 구글 플레이 계정에 로그인하여 구글 플레이에 있는 앱을 찾을 수 있도록 돕습니다.\n\n주의사항: Aurora Store는 Google, Google Play, 앱 개발자 또는 Aurora Store를 통해 다운로드한 앱과 어떠한 승인, 후원, 권한 부여 관계도 맺고 있지 않습니다. 또한, 이들과 어떠한 제휴, 협력 또는 연관 관계도 없음을 명시합니다.</string>
+    <string name="about_aurora_store_summary">Aurora Store를 사용하면 구글 플레이 스토어(Google Play Store)의 앱을 공식적으로 검색하고 다운로드할 수 있습니다. 앱 상세 설명, 스크린샷, 업데이트 정보, 다른 사용자들의 리뷰 등을 확인할 수 있으며, 구글 플레이로부터 기기에 직접 APK 파일을 다운로드할 수 있습니다. Aurora Store를 사용하려면, 앱을 처음 실행하고 설정할 때 Google Play 계정으로 로그인해야 합니다.\n\n일반적인 앱 스토어와 달리, Aurora Store는 어떠한 앱도 직접 소유하거나 라이선스를 보유하거나 배포하지 않습니다. Aurora Store에 표시되는 모든 앱, 설명, 스크린샷 및 기타 콘텐츠는 구글 플레이에서 직접 액세스하여 다운로드하거나 표시하는 것입니다. Aurora Store는 일종의 \'문\'이나 \'브라우저\'와 같은 역할을 하며, 사용자가 자신의 구글 플레이 계정에 로그인하여 구글 플레이에 있는 앱을 찾을 수 있도록 돕습니다.\n\n주의사항: Aurora Store는 Google, Google Play, 앱 개발자 또는 Aurora Store를 통해 다운로드한 앱과 어떠한 승인, 후원, 권한 부여 관계도 맺고 있지 않습니다. 또한, 이들과 어떠한 제휴, 협력 또는 연관 관계도 없음을 명시합니다.</string>
     <string name="export_app_summary_fail">앱 번들 내보내기 실패</string>
     <string name="no_dispensers_available">디스펜서 사용 불가</string>
     <string name="action_install_microG">microG 번들 설치</string>
@@ -404,7 +404,7 @@
     <string name="details_data_safety_shared">이 앱이 공유할 수 있는 데이터</string>
     <string name="details_data_safety_share_none">개발자 측에 따르면 이 앱은 사용자 데이터를 외부 업체나 단체에 공유하지 않습니다.</string>
     <string name="exodus_tracker_desc">이 버전의 앱에는 아직 Exodus Privacy 데이터베이스에 등록되지 않은 추가 트래커가 포함되어 있을 수 있습니다.</string>
-    <string name="exodus_report_trackers"><xliff:g id="app_version_name">%2$s</xliff:g>에서 확인된 트래커: <xliff:g id="number_of_trackers">%1$d</xliff:g>개</string>
+    <string name="exodus_report_trackers"><xliff:g id="app_version_name">%2$s</xliff:g>에서 트래커 <xliff:g id="number_of_trackers">%1$d</xliff:g>개 확인됨</string>
     <string name="installer_microg_misconfigured">설정 오류로 인해 MicroG 인스톨러가 앱 설치에 실패한 것으로 보입니다.</string>
     <string name="pref_install_mode_microg">MicroG 설치 프로그램</string>
     <string name="no_apps_available">사용 가능한 앱 없음</string>
@@ -421,7 +421,7 @@
     <string name="manual_download_version_error">버전 코드에는 숫자만 입력 가능</string>
     <string name="force_restart_snack">변경 사항을 적용하기 위해 재시작 할까요?</string>
     <string name="no_description">설명 없음</string>
-    <string name="permissions_requested"><xliff:g id="number_of_permissions">%1$d</xliff:g>개의 권한</string>
+    <string name="permissions_requested">권한 <xliff:g id="number_of_permissions">%1$d</xliff:g>개</string>
     <string name="details_more_info">더보기</string>
     <string name="details_more_target_api">타겟</string>
     <string name="details_more_package_name">패키지명</string>
@@ -476,4 +476,86 @@
     <string name="account_adding">계정 추가 중…</string>
     <string name="account_refreshing">계정 새로 고치는 중…</string>
     <string name="account_switching">계정 전환 중…</string>
+    <string name="account_add">계정 추가</string>
+    <string name="account_add_google">Google로 로그인</string>
+    <string name="account_add_anonymous">익명 계정 추가</string>
+    <string name="account_set_default_title">기본 계정으로 설정합니까?</string>
+    <string name="account_set_default_message">새 기본 계정을 사용하기 위해 Aurora Store가 다시 시작합니다.</string>
+    <string name="account_refresh_all">모든 계정 새로고침</string>
+    <string name="account_refresh_done">모든 계정 새로고침 완료</string>
+    <string name="action_install_all">모두 설치</string>
+    <string name="action_switch_account">계정 전환</string>
+    <string name="action_retry">재시도</string>
+    <string name="action_view_on_play">Play Store에서 보기</string>
+    <string name="details_review_comment_hint">경험을 설명해 주세요 (선택)</string>
+    <string name="details_review_delete">삭제</string>
+    <string name="details_review_edit">리뷰 수정</string>
+    <string name="details_your_review">내 리뷰</string>
+    <string name="details_review_delete_title">리뷰를 삭제합니까?</string>
+    <string name="details_review_delete_message">내 평가와 리뷰가 Google Play에서 삭제됩니다.</string>
+    <string name="title_security">보안</string>
+    <string name="app_lock_title">앱 잠금</string>
+    <string name="app_lock_summary">Aurora Store를 열 때 생체 인증이나 잠금화면 인증을 요구합니다.</string>
+    <string name="app_lock_no_credential">먼저 기기에 잠금화면(PIN, 패턴, 비밀번호, 생체 인증)을 설정하세요.</string>
+    <string name="app_lock_unlock">잠금 해제</string>
+    <string name="app_lock_prompt_title">Aurora Store 잠금 해제</string>
+    <string name="app_lock_prompt_subtitle">기기의 잠금화면 패턴, PIN, 비밀번호, 지문 입력</string>
+    <string name="confirm_deeplink_sheet_title">Aurora Store로 진입합니까?</string>
+    <string name="confirm_deeplink_sheet_message">외부 앱에서 Aurora Store를 열려 합니다</string>
+    <string name="confirm_deeplink_sheet_source">%1$s에서 엶</string>
+    <string name="notification_channel_alerts">오류 및 경고</string>
+    <string name="notification_group_activity">다운로드 및 업데이트</string>
+    <string name="notification_group_alerts">경고</string>
+    <string name="pref_self_update">자체 업데이트</string>
+    <string name="pref_self_update_desc">업데이트 탭에서 새 Aurora Store 빌드를 제공합니다.</string>
+    <string name="pref_notification_disabled">알림 꺼짐</string>
+    <string name="pref_notification_disabled_desc">눌러서 Aurora Store의 알림을 켜세요</string>
+    <string name="updates_self_header">자체 업데이트</string>
+    <string name="updates_self_desc">Aurora Store의 새 빌드를 이용할 수 있습니다</string>
+    <string name="updates_incompatible_header">미호환 업데이트</string>
+    <string name="updates_incompatible_desc">이 운영 체제에는 해당 시스템 업데이트를 설치할 수 없습니다</string>
+    <string name="pref_updates_check_frequency_3h">3시간마다</string>
+    <string name="pref_updates_check_frequency_6h">6시간마다</string>
+    <string name="pref_updates_check_frequency_12h">12시간마다</string>
+    <string name="pref_updates_check_frequency_24h">24시간마다</string>
+    <string name="pref_updates_check_frequency_3d">3일마다</string>
+    <string name="pref_updates_check_frequency_7d">7일마다</string>
+    <string name="pref_updates_check_frequency_15d">15일마다</string>
+    <string name="pref_ui_theme">테마</string>
+    <string name="pref_theme_style_system">시스템 테마 사용</string>
+    <string name="pref_theme_style_light">밝게</string>
+    <string name="pref_theme_style_dark">어둡게</string>
+    <string name="pref_ui_dynamic_color">동적 색상</string>
+    <string name="pref_ui_dynamic_color_desc">배경화면의 색상을 사용합니다. Aurora의 브랜드 색상을 사용하려면 끄세요.</string>
+    <string name="toast_fav_install_enqueued">앱 %1$d개 설치 중</string>
+    <string name="toast_fav_install_none">설치할 앱 없음</string>
+    <string name="status_installing">설치 중</string>
+    <string name="status_installed">설치 완료</string>
+    <string name="header_blacklist_selected">블랙리스트 등록 완료</string>
+    <string name="installed_sort_by">정렬 기준</string>
+    <string name="installed_sort_filter">정렬 및 필터</string>
+    <string name="installed_sort_name">이름</string>
+    <string name="installed_sort_date_installed">설치한 날짜</string>
+    <string name="installed_sort_date_updated">업데이트한 날짜</string>
+    <string name="installed_sort_package_name">패키지 이름</string>
+    <string name="installed_sort_size">크기</string>
+    <string name="installed_sort_ascending">오름차순</string>
+    <string name="installed_sort_descending">내림차순</string>
+    <string name="installed_filter">필터</string>
+    <string name="installed_filter_user_apps">사용자 앱</string>
+    <string name="installed_filter_system_apps">시스템 앱</string>
+    <string name="installed_filter_all">모두</string>
+    <string name="account_add_failed">계정을 추가할 수 없었습니다. 다시 시도해 주세요.</string>
+    <string name="download_failed_storage">앱을 다운로드할 저장공간 부족</string>
+    <string name="title_notifications">알림</string>
+    <string name="pref_notification_progress">다운로드 진행 표시</string>
+    <string name="pref_notification_progress_desc">앱을 다운로드하거나 업데이트할 때 상세한 진행 상황을 표시합니다. 끄면, 백그라운드에서 다운로드를 유지하기 위해 조용한 알림 하나만을 띄웁니다.</string>
+    <string name="pref_notification_categories">카테고리</string>
+    <string name="pref_notification_categories_desc">알림 종류별로 소리와 중요도 조정</string>
+    <string name="account_remove_message">Aurora Store에서 %1$s 계정을 제거합니까?</string>
+    <string name="account_remove_last_message">이 계정이 유일한 계정입니다. 계정을 제거하면 로그아웃되며, 다시 로그인할 때까지 Aurora Store를 이용할 수 없습니다.</string>
+    <string name="account_add_device">기기 계정</string>
+    <string name="app_lock_locked_message">Aurora Store를 열려면 인증 필요</string>
+    <string name="confirm_deeplink_title">외부 링크 확인</string>
+    <string name="confirm_deeplink_summary">링크로 앱 목록을 열기 전에 물어봐서, 광고가 사용자 동의 없이 Aurora Store를 실행하지 못하게 합니다.</string>
 </resources>
